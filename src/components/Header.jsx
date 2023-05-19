@@ -3,18 +3,22 @@ import React from 'react';
 import logo from './../../public/images/logo.svg';
 
 export default function Header() {
+    //menu button and close button state
     const [menuBtnClicked, setMenuBtnClicked] = useState(false)
     const handleMenuClick = () => {
         setMenuBtnClicked(true);
     }
-    
+    const handleXBtnClick = () => { 
+        setMenuBtnClicked(false)
+    }
+
     return (
         <>
         <header>
             <img src={logo} alt="snaplogo" />
             <button className='menu-btn' onClick={handleMenuClick}></button>
             <nav className='active-nav-menu' style={menuBtnClicked ? { display: 'flex' } : {}}>
-            <button className='x-btn'></button>
+            <button className='x-btn' onClick={handleXBtnClick}></button>
                 <div className='nav-links'>
                     <a href="#">Features</a>
                     <a href="#">Company</a>
