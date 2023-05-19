@@ -1,0 +1,49 @@
+//----header layout----
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $base-margin * 1.5 $base-margin;
+}
+@media (min-width: 769px) {
+    .menu-btn {
+        display: none;
+    }
+}
+.active-nav-menu {
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: min(55vw, 480px);
+    height: 100vh;
+    background-color: #fff;
+    padding: 1.5rem;
+    gap: 2rem;
+
+    a {
+        font-family: $base-font-family;
+        text-decoration: none;
+        color: $primary-gray;
+    }
+    .x-btn {
+        place-self: end;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .nav-login-reg {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        gap: 1rem;
+    }
+    .register-btn {
+        width: 100%;
+    }
+}

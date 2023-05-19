@@ -1,0 +1,32 @@
+//theme colors
+$primary-white: hsl(0, 0%, 98%);
+$primary-gray: hsl(0, 0%, 41%);
+$primary-black: hsl(0, 0%, 8%);
+
+//spacing
+$base-padding: 1rem;
+$base-margin: 1rem;
+
+//border
+$base-border-thickness: none;
+$base-border-radius: 14px;
+
+//outline
+$base-outline-thickness: 1px;
+
+//shadow
+$base-box-shadow: 2px;
+
+//font family
+$base-font-family: 'Epilogue', sans-serif;
+
+//font size
+$base-font-size: 1.125rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+//font weight
+$base-font-weight: 500;
+$font-weight-700: $base-font-weight * 1.4;

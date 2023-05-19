@@ -1,0 +1,47 @@
+//button
+.menu-btn {
+    background-color: transparent;
+    border: $base-border-thickness;
+    background-image: url(../public/images/icon-menu.svg);
+    height: 20px;
+    width: 35px;
+    background-size: cover;
+}
+.x-btn {
+    background-color: transparent;
+    border: $base-border-thickness;
+    background-image: url(../public/images/icon-close-menu.svg);
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+}
+.learn-more-btn {
+    font-family: 'Epilogue', sans-serif;
+    border-radius: $base-border-radius;
+    border: $base-border-thickness;
+    color: $primary-white;
+    background-color: $primary-black;
+    font-weight: $font-weight-700;
+    outline: $base-outline-thickness solid $primary-black;
+    height: 42px;
+    width: 140px;
+}
+.register-btn {
+    font-family: 'Epilogue', sans-serif;
+    border-radius: $base-border-radius;
+    border: $base-border-thickness;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    text-decoration: none;
+    color: $primary-black;
+    background-color: $primary-white;
+    font-weight: $base-font-weight;
+    outline: $base-outline-thickness*2 solid $primary-black;
+    height: 36px;
+    width: 100px;
+
+    font-family: 'Epilogue', sans-serif;
+    border-radius: $base-border-radius;
+    border: $base-border-thickness;
+}
