@@ -12,7 +12,7 @@ header {
 }
 .active-nav-menu {
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: start;
     flex-direction: column;
     top: 0;
@@ -36,6 +36,9 @@ header {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        a {
+            font-size: $font-size-m;
+        }
     }
     .nav-login-reg {
         display: flex;
