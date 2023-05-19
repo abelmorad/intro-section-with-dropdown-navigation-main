@@ -8,7 +8,12 @@ header {
 @media (min-width: 769px) {
     .menu-btn {
         display: none;
+        cursor: pointer;
     }
+}
+.menu-btn {
+    display: block;
+    cursor: pointer;
 }
 .active-nav-menu {
     position: fixed;
@@ -23,14 +28,21 @@ header {
     background-color: #fff;
     padding: 1.5rem;
     gap: 2rem;
-
+    
     a {
         font-family: $base-font-family;
         text-decoration: none;
         color: $primary-gray;
+        width: fit-content;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: $primary-black;
     }
     .x-btn {
         place-self: end;
+        cursor: pointer;
     }
     .nav-links {
         display: flex;
