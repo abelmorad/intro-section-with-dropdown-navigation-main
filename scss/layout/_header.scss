@@ -1,19 +1,19 @@
-//----header layout----
+//----header&navigation layout----
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: $base-margin * 1.5 $base-margin;
 }
+.menu-btn {
+    display: block;
+    cursor: pointer;
+}
 @media (min-width: 769px) {
     .menu-btn {
         display: none;
         cursor: pointer;
     }
-}
-.menu-btn {
-    display: block;
-    cursor: pointer;
 }
 .active-nav-menu {
     position: fixed;

@@ -1,11 +1,13 @@
-//variables
+//---- variables ----
 @import 'variables';
 
-//base 
+//---- base ----
 @import 'base';
 
-//layout
-@import 'layout';
+//---- layout ----
+@import './layout/header';
+@import './layout/hero';
 
 //components
-@import 'components/button';
+@import './components/button';
+

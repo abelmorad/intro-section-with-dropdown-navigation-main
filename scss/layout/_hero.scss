@@ -1,0 +1,39 @@
+//---- landing page layout ----
+.hero-page {
+    display: flex;
+    flex-direction: column;
+    
+    //heroimage mobile
+    .hero-img-mobile {
+        width: 100vw;
+        height: auto;
+    }
+
+    .hero-msg-wrapper {
+        margin: $base-margin;
+        text-align: center;
+        place-content: center;
+        p {
+            color: $primary-gray;
+            line-height: $base-margin * 1.5;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    h1,p {
+        font-family: $base-font-family;
+    }
+
+    .client-wrapper {
+        margin: $base-margin;
+        display: flex;
+        place-content: center;
+        justify-content: space-between;
+
+        .client-img {
+            height: 5vw;
+            width: auto;
+        }
+    }
+}
+
