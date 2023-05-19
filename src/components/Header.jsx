@@ -13,7 +13,6 @@ export default function Header() {
     }
 
     return (
-        <>
         <header>
             <img src={logo} alt="snaplogo" />
             <button className='menu-btn' onClick={handleMenuClick}></button>
@@ -31,9 +30,5 @@ export default function Header() {
                 </div>
             </nav>
         </header>
-        <main>
-        
-        </main>
-        </>
     )
 }
