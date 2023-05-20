@@ -19,8 +19,8 @@ export default function Header() {
             <nav className='active-nav-menu' style={menuBtnClicked ? { display: 'flex' } : {}}>
             <button className='x-btn' onClick={handleXBtnClick}></button>
                 <div className='nav-links'>
-                    <a href="#">Features</a>
-                    <a href="#">Company</a>
+                    <a className='arrow-onlink' href="#">Features</a>
+                    <a className='arrow-onlink' href="#">Company</a>
                     <a href="#">Careers</a>
                     <a href="#">About</a>
                 </div>
