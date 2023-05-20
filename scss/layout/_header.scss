@@ -108,3 +108,19 @@ $nav-icon: (
     gap: $base-margin;
     flex-direction: column;
 }
+
+.company-container {
+    display: flex;
+    flex-direction: column;
+}
+.company-links-wrapper {
+    margin-top: $base-margin * 1.25;
+    margin-left: $base-margin * 2;
+    display: none;
+    gap: $base-margin;
+    flex-direction: column;
+    
+    a:hover {
+        color: $primary-black;
+    }
+}
