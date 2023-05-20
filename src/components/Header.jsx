@@ -12,15 +12,40 @@ export default function Header() {
         setMenuBtnClicked(false)
     }
 
+    //feature dropdown 
+    const [featureClicked, setFeatureClicked] = useState(null)
+    const handleFeatureClick = () => {
+        setFeatureClicked(featureClicked => !featureClicked);
+    }
+    
     return (
         <header>
             <img src={logo} alt="snaplogo" />
             <button className='menu-btn' onClick={handleMenuClick}></button>
-            <nav className='active-nav-menu' style={menuBtnClicked ? { display: 'flex' } : {}}>
+            <nav 
+                className='active-nav-menu' 
+                style={menuBtnClicked ? { display: 'flex' } : {}}
+            > 
             <button className='x-btn' onClick={handleXBtnClick}></button>
                 <div className='nav-links'>
-                    <a className='arrow-onlink' href="#">Features</a>
-                    <a className='arrow-onlink' href="#">Company</a>
+                    <div className="feature-container">
+                        <span onClick={handleFeatureClick}  className='arrow-onlink' href="#">Features</span>
+                        <div style={featureClicked ? { display: 'flex' } : {}} className='feature-wrapper'>
+                            <span className='icon-todo'>
+                                <a href="#">Todo List</a>
+                            </span>
+                            <span className='icon-calendar'>
+                                <a href="#">Calendar</a>
+                            </span>
+                            <span className="icon-reminders">
+                                <a href="#">Reminders</a>
+                            </span>
+                            <span className="icon-planning">
+                                <a href="#">Planning</a>
+                            </span>
+                        </div>
+                    </div>
+                    <span className='arrow-onlink' href="#">Company</span>
                     <a href="#">Careers</a>
                     <a href="#">About</a>
                 </div>
