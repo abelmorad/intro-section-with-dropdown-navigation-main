@@ -27,12 +27,12 @@ export default function Header() {
     return (
         <header>
             <img src={logo} alt="snaplogo" />
-            <button className='menu-btn' onClick={handleMenuClick}></button>
+            <button className='menu-btn' onClick={handleMenuClick} aria-label='menu button'></button>
             <nav 
                 className='active-nav-menu' 
                 style={menuBtnClicked ? { display: 'flex' } : {}}
             > 
-            <button className='x-btn' onClick={handleXBtnClick}></button>
+            <button className='x-btn' onClick={handleXBtnClick} aria-label='close menu button'></button>
                 <div className='nav-links'>
                     <div className="feature-container">
                         <span 
