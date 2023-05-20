@@ -29,14 +29,18 @@ header {
     padding: 1.5rem;
     gap: 2rem;
     
-    a {
+    a,span {
         font-family: $base-font-family;
         text-decoration: none;
+        font-size: $base-font-size;
         color: $primary-gray;
         cursor: pointer;
     }
 
     a:hover {
+        color: $primary-black;
+    }
+    span:hover {
         color: $primary-black;
     }
     .x-btn {
@@ -48,10 +52,9 @@ header {
         align-items: start;
         flex-direction: column;
         gap: 1.5rem;
-        a {
+        span {
             display: flex;
             align-items: center;
-            font-size: $font-size-m;
         }
     }
     .nav-login-reg {
@@ -67,10 +70,41 @@ header {
 .arrow-onlink {
     gap: 2rem;
 }
-.arrow-onlink:after {
+
+.arrow-onlink::after {
     content: '';
     height: 10px;
     width: 16px;
     background-image: url(../../public/images/icon-arrow-down.svg);
     background-size: cover;
+}
+
+$nav-icon: (
+    "todo": url(../../public/images/icon-todo.svg),
+    "calendar": url(../../public/images/icon-calendar.svg),
+    "reminders": url(../../public/images/icon-reminders.svg),
+    "planning": url(../../public/images/icon-planning.svg)
+);
+
+@each $key, $val in $nav-icon {
+    .icon-#{$key}::before{
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-image: $val;
+        background-size: cover; 
+        margin-right: $base-margin;
+    }
+}
+
+.feature-container {
+    display: flex;
+    flex-direction: column;
+}
+.feature-wrapper {
+    margin-top: $base-margin * 1.25;
+    margin-left: $base-margin * 2;
+    display: none;
+    gap: $base-margin;
+    flex-direction: column;
 }
