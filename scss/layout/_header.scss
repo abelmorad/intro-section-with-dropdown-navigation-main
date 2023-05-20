@@ -33,7 +33,6 @@ header {
         font-family: $base-font-family;
         text-decoration: none;
         color: $primary-gray;
-        width: fit-content;
         cursor: pointer;
     }
 
@@ -46,9 +45,12 @@ header {
     }
     .nav-links {
         display: flex;
+        align-items: start;
         flex-direction: column;
         gap: 1.5rem;
         a {
+            display: flex;
+            align-items: center;
             font-size: $font-size-m;
         }
     }
@@ -61,4 +63,14 @@ header {
     .register-btn {
         width: 100%;
     }
+}
+.arrow-onlink {
+    gap: 2rem;
+}
+.arrow-onlink:after {
+    content: '';
+    height: 10px;
+    width: 16px;
+    background-image: url(../../public/images/icon-arrow-down.svg);
+    background-size: cover;
 }
