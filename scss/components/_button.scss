@@ -25,6 +25,7 @@
     outline: $base-outline-thickness solid $primary-black;
     height: 45px;
     width: 140px;
+    cursor: pointer;
 }
 .learn-more-btn:hover {
     background-color: $primary-white;
@@ -48,4 +49,5 @@
     font-family: 'Epilogue', sans-serif;
     border-radius: $base-border-radius;
     border: $base-border-thickness;
+    cursor: pointer;
 }
