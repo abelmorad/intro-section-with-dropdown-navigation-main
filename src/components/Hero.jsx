@@ -9,7 +9,6 @@ import meet from '../../public/images/client-meet.svg';
 
 export default function Hero() {
     return (
-        <div className="hero-page-center">
             <section className="hero-page">
                 <img src={heroImgMobile} className="hero-img-mobile" alt="herobro" />
                 <img src={heroImgDesk} className="hero-img-desk" alt="herobro" />
@@ -30,6 +29,5 @@ export default function Hero() {
                     </div>
                 </div>
             </section>
-        </div>
     )
 }
