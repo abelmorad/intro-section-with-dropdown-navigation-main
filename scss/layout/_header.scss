@@ -75,15 +75,15 @@ header {
     content: '';
     height: 10px;
     width: 16px;
-    background-image: url(../../public/images/icon-arrow-down.svg);
+    background-image: url("../../public/images/icon-arrow-down.svg");
     background-size: cover;
 }
 
 $nav-icon: (
-    "todo": url(../../public/images/icon-todo.svg),
-    "calendar": url(../../public/images/icon-calendar.svg),
-    "reminders": url(../../public/images/icon-reminders.svg),
-    "planning": url(../../public/images/icon-planning.svg)
+    "todo": url("../../public/images/icon-todo.svg"),
+    "calendar": url("../../public/images/icon-calendar.svg"),
+    "reminders": url("../../public/images/icon-reminders.svg"),
+    "planning": url("../../public/images/icon-planning.svg")
 );
 
 @each $key, $val in $nav-icon {
