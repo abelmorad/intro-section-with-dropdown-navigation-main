@@ -25,6 +25,9 @@
     outline: $base-outline-thickness solid $primary-black;
     height: 45px;
     width: 140px;
+    .learn-more-btn:hover {
+        background-color: $primary-white;
+    }
 }
 .register-btn {
     font-family: 'Epilogue', sans-serif;
