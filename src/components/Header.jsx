@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import logo from './../../public/images/logo.svg';
+import arrowDown from './../../public/images/icon-arrow-down.svg';
 
 export default function Header() {
     //menu button and close button state
@@ -35,12 +36,21 @@ export default function Header() {
             <button className='x-btn' onClick={handleXBtnClick} aria-label='close menu button'></button>
                 <div className='nav-links'>
                     <div className="feature-container">
-                        <span 
-                            onClick={handleFeatureClick}  
-                            className='arrow-onlink' 
-                            href="#">
-                                Features
-                        </span>
+                        <div 
+                            className='arrow-down-onlink'
+                            onClick={handleFeatureClick}
+                        >
+                            <span
+                                href="#">
+                                    Features
+                            </span>
+                            <img
+                                style={featureClicked ? { transform: 'rotate(180deg)'} : {}}  
+                                className='arrow-down' 
+                                src={arrowDown} 
+                                alt="arrow down"
+                            />
+                        </div>
                         <div 
                             style={featureClicked ? { display: 'flex' } : {}} 
                             className='feature-wrapper'
@@ -60,12 +70,21 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="company-container">
-                        <span 
-                            onClick={handleCompanyClick} 
-                            className='arrow-onlink'
-                            href="#">
-                                Company
-                        </span>
+                    <div 
+                        className='arrow-down-onlink'
+                        onClick={handleCompanyClick}
+                    >
+                            <span
+                                href="#">
+                                    Company
+                            </span>
+                            <img 
+                                style={companyClicked ? { transform: 'rotate(180deg)'} : {}} 
+                                className='arrow-down' 
+                                src={arrowDown} 
+                                alt="arrow down"
+                            />
+                        </div>
                         <div
                             style={companyClicked ? { display: 'flex' } : {}}
                             className="company-links-wrapper"

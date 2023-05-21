@@ -9,12 +9,6 @@ header {
     display: block;
     cursor: pointer;
 }
-@media (min-width: 769px) {
-    .menu-btn {
-        display: none;
-        cursor: pointer;
-    }
-}
 .active-nav-menu {
     position: fixed;
     display: none;
@@ -32,7 +26,7 @@ header {
     a,span {
         font-family: $base-font-family;
         text-decoration: none;
-        font-size: $base-font-size;
+        font-size: $base-font-size * 0.85;
         color: $primary-gray;
         cursor: pointer;
     }
@@ -67,17 +61,25 @@ header {
         width: 100%;
     }
 }
-.arrow-onlink {
-    gap: 2rem;
+.arrow-down-onlink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    .arrow-down {
+        height: 8px;
+        width: 14px;
+    }
 }
 
-.arrow-onlink::after {
-    content: '';
-    height: 10px;
-    width: 16px;
-    background-image: url("../public/images/icon-arrow-down.svg");
-    background-size: cover;
-}
+// .arrow-down-onlink::after {
+//     display: block;
+//     content: '';
+//     height: 8.5px;
+//     width: 14px;
+//     background-image: url("../public/images/icon-arrow-down.svg");
+//     background-size: cover;
+// }
 
 $nav-icon: (
     "todo": url("../public/images/icon-todo.svg"),
@@ -101,6 +103,7 @@ $nav-icon: (
     display: flex;
     flex-direction: column;
 }
+
 .feature-wrapper {
     margin-top: $base-margin * 1.25;
     margin-left: $base-margin * 2;
@@ -123,4 +126,74 @@ $nav-icon: (
     a:hover {
         color: $primary-black;
     }
+}
+
+@media (min-width: 769px) {
+    .menu-btn {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1024px) {
+    .x-btn{
+        display: none;
+    }
+    header {
+        margin: 0 $base-margin * 3;
+        justify-content: unset;
+    }
+    .active-nav-menu {
+        position: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: unset;
+        background-color: #fff;
+        padding: 1.5rem 0rem 1.5rem 2.5rem;
+        gap: unset;
+
+        .nav-links {
+            gap: 2rem;
+            flex-direction: row;
+            align-items: center;
+        }
+        .nav-login-reg {
+            gap: 2.5rem;
+            width: 12rem;
+            flex-direction: row;
+        }
+        .arrow-onlink {
+            gap: 1rem;
+        }
+    }
+
+    .feature-wrapper {
+        z-index: 100;
+        margin-top: $base-margin * 2.5;
+        padding: 1.5rem;
+        left: 7rem;
+        margin-left: unset;
+        display: none;
+        gap: $base-margin;
+        flex-direction: column;
+        position: fixed;
+        border-radius: $base-border-radius;
+        box-shadow: 0px 7px 20px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .company-links-wrapper {
+        z-index: 100;
+        margin-top: $base-margin * 2.5;
+        padding: 1.5rem;
+        margin-left: unset;
+        display: none;
+        gap: $base-margin;
+        flex-direction: column;
+        position: fixed;
+        border-radius: $base-border-radius;
+        box-shadow: 0px 7px 20px 15px rgba(0, 0, 0, 0.1);
+    }
+    
 }
