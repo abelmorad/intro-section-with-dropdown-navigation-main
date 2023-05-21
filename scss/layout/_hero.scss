@@ -2,38 +2,104 @@
 .hero-page {
     display: flex;
     flex-direction: column;
-    
-    //heroimage mobile
+}
+
+//heroimage mobile
+.hero-img-mobile {
+    width: 100vw;
+    height: auto;
+}
+
+.hero-msg-wrapper {
+    margin: $base-margin;
+    text-align: center;
+    place-content: center;
+    p {
+        color: $primary-gray;
+        line-height: $base-margin * 1.5;
+        margin-bottom: 1.5rem;
+    }
+}
+
+h1,p {
+    font-family: $base-font-family;
+}
+
+.client-wrapper {
+    margin: $base-margin*2;
+    display: flex;
+    place-content: center;
+    justify-content: space-between;
+
+    .client-img {
+        height: 5vw;
+        width: auto;
+    }
+}
+
+
+//hero img for mobile appears and for desktop disappears change layout
+@media (max-width: 1023px) {
     .hero-img-mobile {
-        width: 100vw;
+        display: block;
+    }
+    .hero-img-desk {
+        display: none;
+    }
+}
+//hero img for desktop appears and mobile disappers
+@media (min-width: 1024px) {
+    h1 {
+        margin: 0;
+        font-size: $font-size-xxl + 1.7;
+    }
+
+    p {
+        width: fit-content;
+        font-size: $base-font-size;
+    }
+    
+    .hero-img-desk {
+        display: block;
+        height: 666px;
+        width: 500px;
+    }
+    .hero-img-mobile {
+        display: none;
+    }
+    .hero-page {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 5rem;
+        margin: 0 $base-margin * 8;
+    }
+    .hero-msg-container {
         height: auto;
+        width: 550px;
+        display: inherit;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .hero-msg-wrapper {
-        margin: $base-margin;
-        text-align: center;
-        place-content: center;
-        p {
-            color: $primary-gray;
-            line-height: $base-margin * 1.5;
-            margin-bottom: 1.5rem;
-        }
-    }
-
-    h1,p {
-        font-family: $base-font-family;
+        display: inherit;
+        flex-direction: column;
+        gap: 3rem;
+        margin: $base-margin * 4.5 0;
+        text-align: start;
+        place-content: start;
     }
 
     .client-wrapper {
-        margin: $base-margin;
+        margin: 0;
         display: flex;
         place-content: center;
         justify-content: space-between;
-
+    
         .client-img {
-            height: 5vw;
+            height: 30px;
             width: auto;
         }
     }
 }
-
