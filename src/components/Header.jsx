@@ -40,10 +40,10 @@ export default function Header() {
                             className='arrow-down-onlink'
                             onClick={handleFeatureClick}
                         >
-                            <span
+                            <a
                                 href="#">
                                     Features
-                            </span>
+                            </a>
                             <img
                                 style={featureClicked ? { transform: 'rotate(180deg)'} : {}}  
                                 className='arrow-down' 
@@ -74,10 +74,10 @@ export default function Header() {
                         className='arrow-down-onlink'
                         onClick={handleCompanyClick}
                     >
-                            <span
+                            <a
                                 href="#">
                                     Company
-                            </span>
+                            </a>
                             <img 
                                 style={companyClicked ? { transform: 'rotate(180deg)'} : {}} 
                                 className='arrow-down' 
